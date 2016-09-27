@@ -205,4 +205,8 @@
     <!-- Show lte/4g switch -->
     <string name="show_lte_fourgee_title">Show 4G instead of LTE</string>
     <string name="show_lte_fourgee_summary">Replace the LTE mobile indicator with 4G</string>
+
+    <!-- Wake on Plug -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
 </resources>
