@@ -79,6 +79,12 @@
                         android:data="https://source.android.com/security/bulletin/" />
         </Preference>
 
+        <!-- TripNDroid Version -->
+        <Preference
+                android:key="td_version"
+                android:title="@string/td_version_title"
+                android:summary="@string/device_info_default" />
+
         <!-- Device FCC equipment id -->
         <Preference
                 android:key="fcc_equipment_id"
