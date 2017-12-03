@@ -106,7 +106,7 @@ public class BuildNumberPreferenceController extends PreferenceController
                 mContext, UserManager.DISALLOW_DEBUGGING_FEATURES, UserHandle.myUserId());
         mDevHitCountdown = mContext.getSharedPreferences(DevelopmentSettings.PREF_FILE,
                 Context.MODE_PRIVATE).getBoolean(DevelopmentSettings.PREF_SHOW,
-                android.os.Build.TYPE.equals("eng")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
+                android.os.Build.TYPE.equals("eng") || android.os.Build.TYPE.equals("userdebug")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
     }
 
