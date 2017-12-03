@@ -2907,8 +2907,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 protected boolean isPageSearchEnabled(Context context) {
                     return context.getSharedPreferences(DevelopmentSettings.PREF_FILE,
                             Context.MODE_PRIVATE).getBoolean(
-                            DevelopmentSettings.PREF_SHOW,
-                            android.os.Build.TYPE.equals("eng"));
+                            DevelopmentSettings.PREF_SHOW, android.os.Build.TYPE.equals("eng") || android.os.Build.TYPE.equals("userdebug"));
                 }
 
                 @Override
