@@ -240,8 +240,7 @@ public class DashboardSummary extends InstrumentedFragment
         @Override
         protected List<Tile> doInBackground(Void... params) {
             final Context context = getContext();
-            boolean isSmartSuggestionEnabled =
-                    mSuggestionFeatureProvider.isSmartSuggestionEnabled(context);
+            boolean isSmartSuggestionEnabled = false;
             List<Tile> suggestions = mSuggestionParser.getSuggestions(isSmartSuggestionEnabled);
             if (isSmartSuggestionEnabled) {
                 List<String> suggestionIds = new ArrayList<>(suggestions.size());
@@ -254,11 +253,7 @@ public class DashboardSummary extends InstrumentedFragment
             }
             for (int i = 0; i < suggestions.size(); i++) {
                 Tile suggestion = suggestions.get(i);
-                if (mSuggestionsChecks.isSuggestionComplete(suggestion)) {
-                    mSuggestionFeatureProvider.dismissSuggestion(
-                            context, mSuggestionParser, suggestion);
                     suggestions.remove(i--);
-                }
             }
             return suggestions;
         }
@@ -283,10 +278,6 @@ public class DashboardSummary extends InstrumentedFragment
         List<DashboardCategory> categories = new ArrayList<>();
         categories.add(mDashboardFeatureProvider.getTilesForCategory(
                 CategoryKey.CATEGORY_HOMEPAGE));
-        if (suggestions != null) {
-            mAdapter.setCategoriesAndSuggestions(categories, suggestions);
-        } else {
             mAdapter.setCategory(categories);
-        }
     }
 }

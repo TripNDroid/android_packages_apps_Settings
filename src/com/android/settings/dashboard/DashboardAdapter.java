@@ -126,7 +126,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
         mDashboardData = new DashboardData.Builder()
                 .setConditions(conditions)
-                .setSuggestions(suggestions)
+                .setSuggestions(null)
                 .setCategories(categories)
                 .setSuggestionMode(suggestionMode)
                 .build();
@@ -158,7 +158,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
         final DashboardData prevData = mDashboardData;
         mDashboardData = new DashboardData.Builder(prevData)
-                .setSuggestions(suggestions)
+                .setSuggestions(null)
                 .setCategories(categories)
                 .build();
         notifyDashboardDataChanged(prevData);
