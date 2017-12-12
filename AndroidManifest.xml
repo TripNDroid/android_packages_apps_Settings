@@ -854,6 +854,41 @@
                 android:value="true" />
         </activity>
 
+        <!-- TripNDroid Settings -->
+        <activity android:name="Settings$TDSettingsActivity"
+                android:label="@string/tdsettings_title"
+                android:icon="@drawable/ic_settings_tripndroid"
+                android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.TD_SETTINGS" />
+                <action android:name="android.settings.TD_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="7">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.TDSettings" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
+        <activity-alias android:name="TDSettings"
+                android:label="@string/tdsettings_title"
+                android:exported="true"
+                android:targetActivity="Settings$TDSettingsActivity">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.TDSettings" />
+        </activity-alias>
+
         <activity android:name="Settings$DisplaySettingsActivity"
                 android:label="@string/display_settings"
                 android:icon="@drawable/ic_settings_display"

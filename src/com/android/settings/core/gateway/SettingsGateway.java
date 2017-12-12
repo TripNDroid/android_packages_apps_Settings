@@ -115,6 +115,7 @@ import com.android.settings.sim.SimSettings;
 import com.android.settings.system.ResetDashboardFragment;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settings.tts.TextToSpeechSettings;
+import com.android.settings.TDSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.vpn2.VpnSettings;
 import com.android.settings.wallpaper.WallpaperTypeSettings;
@@ -234,6 +235,7 @@ public class SettingsGateway {
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
+            TDSettings.class.getName(),
             SupportFragment.class.getName(),
             StorageDashboardFragment.class.getName(),
             SystemDashboardFragment.class.getName(),
@@ -282,5 +284,7 @@ public class SettingsGateway {
             Settings.DateTimeSettingsActivity.class.getName(),
             Settings.DeviceInfoSettingsActivity.class.getName(),
             Settings.EnterprisePrivacySettingsActivity.class.getName(),
+            Settings.TDSettingsActivity.class.getName(),
+            Settings.MiscSettingsActivity.class.getName()
     };
 }
