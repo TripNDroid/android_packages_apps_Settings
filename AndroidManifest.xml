@@ -1064,6 +1064,16 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.ProcessStatsSummary" />
         </activity>
+        <activity android:name="Settings$MiscSettingsActivity"
+                android:label="@string/misc_settings_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.td.MiscSettings" />
+        </activity>
 
         <activity android:name="Settings$AppMemoryUsageActivity"
                   android:label="@string/app_list_memory_use"

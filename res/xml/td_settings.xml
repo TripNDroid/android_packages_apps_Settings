@@ -19,4 +19,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/tdsettings_title">
 
+    <Preference
+        android:key="misc_settings"
+        android:title="@string/misc_settings_title"
+        android:summary="@string/misc_settings_summary"
+        android:icon="@drawable/ic_settings_td_misc"
+        android:fragment="com.android.settings.td.MiscSettings" />
+
 </PreferenceScreen>
