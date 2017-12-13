@@ -225,4 +225,21 @@
     <string name="tdsettings_title">TripNDroid settings</string>
     <string name="header_category_tdsettings">Customization</string>
     <string name="header_category_statusbar">Statusbar</string>
+    <string name="header_category_misc">Miscellaneous</string>
+
+    <!-- TD Settings: Misc -->
+    <string name="misc_settings_title">Misc</string>
+    <string name="misc_settings_summary">Various small system settings</string>
+    <string name="volume_rocker_wake_title">Volume rocker wake</string>
+    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
+    <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
+    <string name="media_scanner_on_boot_enabled">Scan media</string>
+    <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
+    <string name="media_scanner_on_boot_disabled">Do not scan media</string>
+    <string name="hide_lockscreen_bottom_shortcuts_title">Bottom shortcuts</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_on">Lockscreen bottom shortcuts are enabled</string>
+    <string name="hide_lockscreen_bottom_shortcuts_summary_off">Lockscreen bottom shortcuts are disabled</string>
+    <string name="navigation_bar_visible_title">Show navigationbar</string>
+    <string name="navigation_bar_visible_summary_on">The navigationbar is currently enabled</string>
+    <string name="navigation_bar_visible_summary_off">The navigationbar is currently disabled</string>
 </resources>

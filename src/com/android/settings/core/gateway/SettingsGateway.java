@@ -116,6 +116,7 @@ import com.android.settings.system.ResetDashboardFragment;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.TDSettings;
+import com.android.settings.td.MiscSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.vpn2.VpnSettings;
 import com.android.settings.wallpaper.WallpaperTypeSettings;
@@ -236,6 +237,7 @@ public class SettingsGateway {
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
             TDSettings.class.getName(),
+            MiscSettings.class.getName(),
             SupportFragment.class.getName(),
             StorageDashboardFragment.class.getName(),
             SystemDashboardFragment.class.getName(),
