@@ -220,4 +220,9 @@
     <string name="color_default">Default</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+
+    <!-- TD Settings -->
+    <string name="tdsettings_title">TripNDroid settings</string>
+    <string name="header_category_tdsettings">Customization</string>
+    <string name="header_category_statusbar">Statusbar</string>
 </resources>
