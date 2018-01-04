@@ -376,38 +376,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
             holder.icons.setVisibility(View.INVISIBLE);
         }
 
-        if (data.hiddenSuggestionCount > 0) {
-            holder.summary.setTextColor(Color.BLACK);
-            if (curMode == DashboardData.HEADER_MODE_COLLAPSED) {
-                if (data.conditionCount > 0) {
-                    holder.summary.setText(mContext.getResources().getQuantityString(
-                            R.plurals.suggestions_collapsed_summary,
-                            data.hiddenSuggestionCount, data.hiddenSuggestionCount));
-                } else {
-                    holder.title.setText(mContext.getResources().getQuantityString(
-                            R.plurals.suggestions_collapsed_title,
-                            data.hiddenSuggestionCount, data.hiddenSuggestionCount));
-                    holder.title.setTextColor(Color.BLACK);
-                    holder.summary.setText(null);
-                }
-            } else if (curMode == DashboardData.HEADER_MODE_DEFAULT) {
-                if (data.conditionCount > 0) {
-                    holder.summary.setText(mContext.getString(
-                            R.string.suggestions_summary, data.hiddenSuggestionCount));
-                } else {
-                    holder.title.setText(mContext.getString(
-                            R.string.suggestions_more_title, data.hiddenSuggestionCount));
-                    holder.title.setTextColor(Color.BLACK);
-                    holder.summary.setText(null);
-                }
-            }
-        } else if (data.conditionCount > 1) {
-            holder.summary.setTextColor(Utils.getColorAccent(mContext));
-            holder.summary.setText(
-                    mContext.getString(R.string.condition_summary, data.conditionCount));
-        } else {
-            holder.summary.setText(null);
-        }
+        holder.summary.setText(null);
 
         final Resources res = mContext.getResources();
         final int padding = res.getDimensionPixelOffset(
@@ -465,12 +434,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
         } else {
             holder.icon.setImageDrawable(mCache.getIcon(tile.icon));
             holder.title.setText(tile.title);
-            if (!TextUtils.isEmpty(tile.summary)) {
-                holder.summary.setText(tile.summary);
-                holder.summary.setVisibility(View.VISIBLE);
-            } else {
-                holder.summary.setVisibility(View.GONE);
-            }
+            holder.summary.setVisibility(View.GONE);
         }
     }
 
